@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">TestTask</string>
+
+    <string name="text_view_title_attack">Атака</string>
+    <string name="text_view_title_defense">Защита</string>
+    <string name="text_view_title_health">Здоровье</string>
+    <string name="text_view_title_damage">Урон</string>
+
+    <string name="text_view_default_value">0</string>
+    <string name="text_view_default_health_value">0 (0)</string>
+    <string name="text_view_default_damage_value">0 – 0</string>
+    <string name="text_view_health_value">%1$d (%2$d)</string>
+    <string name="text_view_damage_value">%1$d - %2$d</string>
+
+    <string name="text_view_title_player">Игрок</string>
+    <string name="button_punch_player">Ударить монстра</string>
+    <string name="button_default_healing_player">Исцелиться (0)</string>
+    <string name="button_healing_player">Исцелиться (%1$d)</string>
+    <string name="button_new_player">Новый игрок</string>
+    <string name="button_new_wrong_player">Рискнуть!</string>
+
+    <string name="text_view_title_monster">Монстр</string>
+    <string name="button_punch_monster">Ударить игрока</string>
+    <string name="button_new_monster">Новый монстр</string>
+
+    <string name="text_view_default_info">Информация:</string>
+    <string name="button_clear">Очистить</string>
+
+    <string name="log_try_punch">\n%1$s пытается нанести удар</string>
+    <string name="log_punch_success">\n%1$s нанес удар (Урон: %2$d)</string>
+    <string name="log_punch_fault">\n%1$s промахнулся</string>
+    <string name="log_healing_success">\n%1$s применил исцеление</string>
+    <string name="log_healing_fault">\n%1$s и так здоров!</string>
+    <string name="log_dice_roll">\nНа кубике выпало %1$d</string>
+    <string name="log_death">\n%1$s погиб!</string>
+    <string name="log_try_wrong_player">\nПопробуем создать особого игрока</string>
+    <string name="log_wrong_player_success">\nПолучилось!</string>
+    <string name="log_wrong_attack">\nНеверное значение атаки (%1$d)</string>
+    <string name="log_wrong_defense">\nНеверное значение защиты (%1$d)</string>
+    <string name="log_wrong_health">\nНеверное значение здоровья (%1$d)</string>
+    <string name="log_wrong_damage">\nНеверное значение урона</string>
+</resources>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewTitlePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_player"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTitleAttackPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_attack"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDefensePlayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitlePlayer" />
+
+        <TextView
+            android:id="@+id/textViewTitleDefensePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_defense"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleHealthPlayer"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleAttackPlayer"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitlePlayer" />
+
+        <TextView
+            android:id="@+id/textViewTitleHealthPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_health"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDamagePlayer"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleDefensePlayer"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitlePlayer" />
+
+        <TextView
+            android:id="@+id/textViewTitleDamagePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_damage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleHealthPlayer"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitlePlayer" />
+
+        <TextView
+            android:id="@+id/textViewValueAttackPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_value"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDefensePlayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleAttackPlayer" />
+
+        <TextView
+            android:id="@+id/textViewValueDefensePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_value"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleHealthPlayer"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleAttackPlayer"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleDefensePlayer" />
+
+        <TextView
+            android:id="@+id/textViewValueHealthPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_health_value"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDamagePlayer"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleDefensePlayer"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleHealthPlayer" />
+
+        <TextView
+            android:id="@+id/textViewValueDamagePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_damage_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleHealthPlayer"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleDamagePlayer" />
+
+        <Button
+            android:id="@+id/buttonPunchPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/button_punch_player"
+            app:layout_constraintEnd_toStartOf="@+id/buttonHealingPlayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewValueAttackPlayer" />
+
+        <Button
+            android:id="@+id/buttonHealingPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/button_default_healing_player"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonPunchPlayer"
+            app:layout_constraintTop_toBottomOf="@+id/textViewValueAttackPlayer" />
+
+        <Button
+            android:id="@+id/buttonNewPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_new_player"
+            app:layout_constraintEnd_toStartOf="@+id/buttonNewWrongPlayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPunchPlayer" />
+
+        <Button
+            android:id="@+id/buttonNewWrongPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_new_wrong_player"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonNewPlayer"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPunchPlayer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMonster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPlayer">
+
+        <TextView
+            android:id="@+id/textViewTitleMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_monster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTitleAttackMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_attack"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDefenseMonster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleMonster" />
+
+        <TextView
+            android:id="@+id/textViewTitleDefenseMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_defense"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleHealthMonster"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleAttackMonster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleMonster" />
+
+        <TextView
+            android:id="@+id/textViewTitleHealthMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_health"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDamageMonster"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleDefenseMonster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleMonster" />
+
+        <TextView
+            android:id="@+id/textViewTitleDamageMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_title_damage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleHealthMonster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleMonster" />
+
+        <TextView
+            android:id="@+id/textViewValueAttackMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_value"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDefenseMonster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleAttackMonster" />
+
+        <TextView
+            android:id="@+id/textViewValueDefenseMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_value"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleHealthMonster"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleAttackMonster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleDefenseMonster" />
+
+        <TextView
+            android:id="@+id/textViewValueHealthMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_health_value"
+            app:layout_constraintEnd_toStartOf="@+id/textViewTitleDamageMonster"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleDefenseMonster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleHealthMonster" />
+
+        <TextView
+            android:id="@+id/textViewValueDamageMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_default_damage_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitleHealthMonster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleDamageMonster" />
+
+        <Button
+            android:id="@+id/buttonPunchMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/button_punch_monster"
+            app:layout_constraintEnd_toStartOf="@+id/buttonNewMonster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewValueAttackMonster" />
+
+        <Button
+            android:id="@+id/buttonNewMonster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_new_monster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonPunchMonster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewValueAttackMonster" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/text_view_default_info"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMonster" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
