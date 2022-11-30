@@ -1,5 +1,7 @@
 package com.example.testtask
 
+import android.annotation.SuppressLint
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.testtask.databinding.ActivityMainBinding
@@ -12,10 +14,13 @@ class MainActivity : AppCompatActivity() {
 
     private var monster = Monster()
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         binding.buttonNewPlayer.setOnClickListener {
             player = Player()
